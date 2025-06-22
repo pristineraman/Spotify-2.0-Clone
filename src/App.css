@@ -1,0 +1,48 @@
+/* App-specific styles */
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+}
+
+/* Loading animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.loading::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+} 
